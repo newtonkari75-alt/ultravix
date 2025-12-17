@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <script src="https://cdn.jsdelivr.net/gh/casmar76/SmartClick/smart_click.js" data-origin-url="https://pixel.insulinet.site"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>UltraVix - Hivatalos Oldal | Ízületi támogatás</title>
+    <meta name="description" content="Az UltraVix segít csökkenteni a fájdalmat, a gyulladást és javítani az ízületek mozgékonyságát.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        medical: {
+                            50: '#f0fdf9',
+                            100: '#ccfbf1',
+                            600: '#0d9488', // Teal-600 - More professional green/blue mix
+                            700: '#0f766e',
+                            800: '#115e59',
+                            900: '#134e4a',
+                        },
+                        cta: {
+                            500: '#f97316', // Orange
+                            600: '#ea580c', // Darker Orange
+                        }
+                    },
+                    screens: {
+                        'xs': '375px',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        html { scroll-behavior: smooth; }
+        body { -webkit-tap-highlight-color: transparent; }
+        .hero-bg {
+            background: linear-gradient(180deg, #f0fdf9 0%, #ffffff 100%);
+        }
+        .checkmark-list li {
+            position: relative;
+            padding-left: 1.75rem;
+            margin-bottom: 0.6rem;
+            font-size: 1rem;
+            line-height: 1.4;
+            color: #374151;
+        }
+        .checkmark-list li::before {
+            content: '✔';
+            position: absolute;
+            left: 0;
+            top: 2px;
+            color: #0d9488;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        
+        /* Orange Pulse for Limited Stock */
+        .stock-pulse-orange {
+            animation: pulse-orange 2s infinite;
+        }
+        @keyframes pulse-orange {
+            0% { box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.7); }
+            70% { box-shadow: 0 0 0 6px rgba(249, 115, 22, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(249, 115, 22, 0); }
+        }
+
+        /* Green Pulse for Available Stock */
+        .stock-pulse-green {
+            animation: pulse-green 2s infinite;
+        }
+        @keyframes pulse-green {
+            0% { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.7); }
+            70% { box-shadow: 0 0 0 6px rgba(74, 222, 128, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0); }
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 antialiased flex flex-col min-h-screen bg-white">
+
+    <!-- Navbar -->
+    <nav class="bg-white/95 backdrop-blur shadow-sm sticky top-0 z-50 border-b border-gray-100 h-16 flex items-center">
+        <div class="w-full max-w-lg mx-auto px-5 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="bg-medical-600 text-white p-1.5 rounded-lg shadow-sm">
+                    <i class="fa-solid fa-leaf text-lg"></i>
+                </div>
+                <span class="text-xl font-bold text-medical-900 tracking-tight">ULTRA<span class="text-medical-600">VIX</span></span>
+            </div>
+            <a href="#footer-cta" class="bg-cta-500 hover:bg-cta-600 text-white text-sm font-bold py-2 px-5 rounded-full transition duration-300 shadow-sm active:scale-95 uppercase tracking-wide">
+                <span data-i18n="nav_order">Rendelés</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="hero-bg pt-8 pb-10 px-5 flex-grow flex flex-col items-center text-center">
+        <div class="w-full max-w-lg mx-auto">
+            
+            <!-- Headline -->
+            <h1 class="text-2xl xs:text-3xl font-extrabold text-gray-900 leading-tight mb-4">
+                <span data-i18n="hero_headline_1">Ízületi fájdalom korlátozza a</span> <br class="hidden xs:block" />
+                <span class="text-medical-600" data-i18n="hero_headline_2">mindennapjait?</span>
+            </h1>
+            
+            <!-- Subheadline -->
+            <p class="text-base xs:text-lg text-gray-600 mb-8 leading-relaxed px-1" data-i18n="hero_subheadline">
+                Az <strong>UltraVix</strong> segít csökkenteni a fájdalmat, a gyulladást és javítani az ízületek mozgékonyságát.
+            </p>
+            
+            <!-- IMAGE -->
+            <div class="mb-8 relative flex justify-center w-full">
+               <div class="absolute inset-0 bg-gradient-to-b from-transparent to-white/50 rounded-full blur-2xl w-2/3 mx-auto"></div>
+               <img src="images/ultravix1.png" alt="UltraVix" class="relative z-10 h-40 xs:h-48 object-contain drop-shadow-xl transform hover:scale-105 transition duration-500">
+            </div>
+
+            <!-- Bullet points (Clean Card) -->
+            <div class="bg-white p-6 rounded-2xl border border-medical-100 shadow-sm mb-8 text-left mx-1">
+                <ul class="checkmark-list font-medium">
+                    <li data-i18n="bullet_1">Segít enyhíteni az ízületi fájdalmat</li>
+                    <li data-i18n="bullet_2">Csökkenti a merevséget és a duzzanatot</li>
+                    <li data-i18n="bullet_3">Porcok regenerációjának támogatása</li>
+                    <li data-i18n="bullet_4">Segít visszanyerni az aktív életet</li>
+                </ul>
+            </div>
+
+            <!-- Main CTA Button -->
+            <a href="#footer-cta" class="block w-full bg-cta-500 hover:bg-cta-600 text-white font-bold text-lg py-4 rounded-xl shadow-lg hover:shadow-xl active:scale-95 transition-all transform animate-bounce-slow mx-auto border-b-4 border-cta-600">
+                <span data-i18n="cta_button">RENDELÉS LEADÁSA</span> <i class="fa-solid fa-arrow-down ml-2"></i>
+            </a>
+
+        </div>
+    </header>
+
+    <!-- STOCK / LOGISTICS FOOTER -->
+    <footer class="bg-gray-50 border-t border-gray-200 py-10 pb-16" id="footer-cta">
+        <div class="w-full max-w-lg mx-auto px-5">
+            
+            <!-- Logistics Header -->
+            <div class="text-center mb-6">
+                <div class="inline-flex items-center gap-2 bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-3">
+                    <i class="fa-solid fa-truck-fast"></i> <span data-i18n="official_dist">Hivatalos Forgalmazás</span>
+                </div>
+                <h2 class="text-xl xs:text-2xl font-bold text-gray-900" data-i18n="stock_title">Raktárkészlet Ellenőrzése</h2>
+                <p class="text-sm text-gray-500 mt-2" data-i18n="stock_subtitle">Válassza ki a szállítási címet a folytatáshoz:</p>
+            </div>
+            
+            <!-- Stock Cards Container -->
+            <div class="bg-white rounded-xl shadow-md border border-gray-200 overflow-hidden">
+                <!-- Header Row -->
+                <div class="bg-gray-100 px-5 py-3 border-b border-gray-200 flex justify-between items-center text-xs font-bold text-gray-500 uppercase tracking-wider">
+                    <span data-i18n="col_country">Ország</span>
+                    <span data-i18n="col_status">Státusz</span>
+                </div>
+
+                <!-- Lista de Países -->
+                <div class="flex flex-col gap-4 p-5 bg-gray-50">
+                    <!-- Option Hungary (LIMITED) -->
+                    <a href="https://kafda.doctormurin.com/l" class="group relative flex items-center justify-between p-4 bg-white border border-gray-200 rounded-xl shadow-sm hover:border-orange-400 hover:shadow-md transition-all duration-200 cursor-pointer">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full overflow-hidden border border-gray-100 shadow-sm flex-shrink-0 bg-gray-50">
+                                <img src="https://flagcdn.com/w80/hu.png" alt="Magyarország" class="w-full h-full object-cover">
+                            </div>
+                            <div class="flex flex-col justify-center">
+                                <span class="block font-bold text-gray-900 text-lg leading-tight group-hover:text-orange-700">Hungary</span>
+                                <span class="text-sm text-gray-500 mt-0.5">Magyarország</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-col items-end gap-1">
+                            <!-- Orange Indicator for Limited Stock -->
+                            <div class="flex items-center gap-1.5 bg-orange-100 text-orange-800 px-2.5 py-1 rounded-md text-xs font-bold border border-orange-200">
+                                <div class="w-2 h-2 bg-orange-500 rounded-full stock-pulse-orange"></div>
+                                <span data-i18n="status_limit">KORLÁTOZOTT</span>
+                            </div>
+                            <i class="fa-solid fa-chevron-right text-gray-300 text-sm group-hover:text-orange-600 transition-colors mt-1 mr-1"></i>
+                        </div>
+                    </a>
+
+                    <!-- Option Romania (AVAILABLE) -->
+                    <a href="https://ys9by.doctormurin.com/l" class="group relative flex items-center justify-between p-4 bg-white border border-gray-200 rounded-xl shadow-sm hover:border-green-400 hover:shadow-md transition-all duration-200 cursor-pointer">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full overflow-hidden border border-gray-100 shadow-sm flex-shrink-0 bg-gray-50">
+                                <img src="https://flagcdn.com/w80/ro.png" alt="România" class="w-full h-full object-cover">
+                            </div>
+                            <div class="flex flex-col justify-center">
+                                <span class="block font-bold text-gray-900 text-lg leading-tight group-hover:text-green-700">Romania</span>
+                                <span class="text-sm text-gray-500 mt-0.5">România</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-col items-end gap-1">
+                            <!-- Green Indicator for Available Stock -->
+                            <div class="flex items-center gap-1.5 bg-green-100 text-green-800 px-2.5 py-1 rounded-md text-xs font-bold border border-green-200">
+                                <div class="w-2 h-2 bg-green-500 rounded-full stock-pulse-green"></div>
+                                <span data-i18n="status_ok">KÉSZLETEN</span>
+                            </div>
+                            <i class="fa-solid fa-chevron-right text-gray-300 text-sm group-hover:text-green-600 transition-colors mt-1 mr-1"></i>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="bg-gray-100 px-5 py-3 border-t border-gray-200 text-center">
+                    <p class="text-xs text-gray-500 flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-arrows-rotate text-gray-400"></i>
+                        <span data-i18n="last_update">Adatok frissítve: Éppen most</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Footer Links -->
+            <div class="mt-8 text-center text-xs text-gray-400 border-t border-gray-200 pt-6">
+                <p class="mb-3 font-medium">&copy; 2024 UltraVix Logistics.</p>
+                <div class="flex justify-center gap-6">
+                    <a href="#" class="hover:text-gray-600 underline decoration-gray-300" data-i18n="privacy">Adatvédelem</a>
+                    <a href="#" class="hover:text-gray-600 underline decoration-gray-300" data-i18n="terms">ÁSZF</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Translation Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Dictionary for Romanian translations
+            const roTranslations = {
+                nav_order: "Comandă",
+                hero_headline_1: "Durerile articulare vă limitează",
+                hero_headline_2: "viața de zi cu zi?",
+                hero_subheadline: "<strong>UltraVix</strong> ajută la reducerea durerii, a inflamației și la îmbunătățirea mobilității.",
+                bullet_1: "Calmează durerile articulare",
+                bullet_2: "Reduce rigiditatea și umflăturile",
+                bullet_3: "Susține regenerarea cartilajelor",
+                bullet_4: "Recâștigă o viață activă",
+                cta_button: "COMANDĂ ACUM",
+                
+                // Stock Section Translations
+                official_dist: "Distribuție Oficială",
+                stock_title: "Verificare Stoc",
+                stock_subtitle: "Selectați adresa de livrare:",
+                col_country: "Țară",
+                col_status: "Stare",
+                status_limit: "STOC LIMITAT",
+                status_ok: "ÎN STOC", // Added status_ok for Green indicator
+                last_update: "Actualizat: Chiar acum",
+                
+                rights: "Toate drepturile rezervate.",
+                privacy: "Confidențialitate",
+                terms: "Termeni"
+            };
+
+            // Detect browser language
+            const userLang = navigator.language || navigator.userLanguage;
+            
+            // Check if language starts with 'ro' (Romanian)
+            if (userLang && userLang.toLowerCase().startsWith('ro')) {
+                // Update HTML lang attribute
+                document.documentElement.lang = 'ro';
+                document.title = "UltraVix - Site Oficial | Suport Articular";
+                document.querySelector('meta[name="description"]').setAttribute("content", "UltraVix ajută la reducerea durerii, a inflamației și la îmbunătățirea mobilității articulare.");
+
+                // Apply translations based on data-i18n attribute
+                const elements = document.querySelectorAll('[data-i18n]');
+                elements.forEach(el => {
+                    const key = el.getAttribute('data-i18n');
+                    if (roTranslations[key]) {
+                        // Use innerHTML for subheadline to keep the <strong> tag
+                        if (key === 'hero_subheadline') {
+                            el.innerHTML = roTranslations[key];
+                        } else {
+                            el.innerText = roTranslations[key];
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
