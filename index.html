@@ -170,46 +170,54 @@
                 <!-- Lista de Países -->
                 <div class="flex flex-col gap-4 p-5 bg-gray-50">
                     <!-- Option Hungary (LIMITED) -->
-                    <a href="https://kafda.doctormurin.com/l" class="group relative flex items-center justify-between p-4 bg-white border border-gray-200 rounded-xl shadow-sm hover:border-orange-400 hover:shadow-md transition-all duration-200 cursor-pointer">
+                    <a href="https://kafda.doctormurin.com/l" class="group relative flex items-center justify-between p-4 bg-white border border-gray-200 rounded-xl shadow-sm hover:border-orange-400 hover:shadow-md transition-all duration-200 cursor-pointer overflow-hidden">
+                        <!-- Discount Badge -->
+                        <div class="absolute top-0 right-0 bg-red-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-bl-lg z-10">
+                            <span data-i18n="discount_badge">50% KEDVEZMÉNY</span>
+                        </div>
+
                         <div class="flex items-center gap-4">
                             <div class="w-12 h-12 rounded-full overflow-hidden border border-gray-100 shadow-sm flex-shrink-0 bg-gray-50">
                                 <img src="https://flagcdn.com/w80/hu.png" alt="Magyarország" class="w-full h-full object-cover">
                             </div>
                             <div class="flex flex-col justify-center">
-                                <span class="block font-bold text-gray-900 text-lg leading-tight group-hover:text-orange-700">Hungary</span>
-                                <span class="text-sm text-gray-500 mt-0.5">Magyarország</span>
+                                <span class="block font-bold text-gray-900 text-lg leading-tight group-hover:text-orange-700">Magyarország</span>
+                                <span class="text-xs text-gray-500 mt-0.5" data-i18n="country_hu_desc">Hivatalos Weboldal</span>
                             </div>
                         </div>
                         
-                        <div class="flex flex-col items-end gap-1">
+                        <div class="flex flex-col items-end gap-1 mt-2">
                             <!-- Orange Indicator for Limited Stock -->
                             <div class="flex items-center gap-1.5 bg-orange-100 text-orange-800 px-2.5 py-1 rounded-md text-xs font-bold border border-orange-200">
                                 <div class="w-2 h-2 bg-orange-500 rounded-full stock-pulse-orange"></div>
                                 <span data-i18n="status_limit">KORLÁTOZOTT</span>
                             </div>
-                            <i class="fa-solid fa-chevron-right text-gray-300 text-sm group-hover:text-orange-600 transition-colors mt-1 mr-1"></i>
                         </div>
                     </a>
 
                     <!-- Option Romania (AVAILABLE) -->
-                    <a href="https://ys9by.doctormurin.com/l" class="group relative flex items-center justify-between p-4 bg-white border border-gray-200 rounded-xl shadow-sm hover:border-green-400 hover:shadow-md transition-all duration-200 cursor-pointer">
+                    <a href="https://ys9by.doctormurin.com/l" class="group relative flex items-center justify-between p-4 bg-white border border-gray-200 rounded-xl shadow-sm hover:border-green-400 hover:shadow-md transition-all duration-200 cursor-pointer overflow-hidden">
+                        <!-- Discount Badge -->
+                        <div class="absolute top-0 right-0 bg-red-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-bl-lg z-10">
+                            <span data-i18n="discount_badge">50% KEDVEZMÉNY</span>
+                        </div>
+
                         <div class="flex items-center gap-4">
                             <div class="w-12 h-12 rounded-full overflow-hidden border border-gray-100 shadow-sm flex-shrink-0 bg-gray-50">
                                 <img src="https://flagcdn.com/w80/ro.png" alt="România" class="w-full h-full object-cover">
                             </div>
                             <div class="flex flex-col justify-center">
-                                <span class="block font-bold text-gray-900 text-lg leading-tight group-hover:text-green-700">Romania</span>
-                                <span class="text-sm text-gray-500 mt-0.5">România</span>
+                                <span class="block font-bold text-gray-900 text-lg leading-tight group-hover:text-green-700">România</span>
+                                <span class="text-xs text-gray-500 mt-0.5" data-i18n="country_ro_desc">Hivatalos Weboldal</span>
                             </div>
                         </div>
                         
-                        <div class="flex flex-col items-end gap-1">
+                        <div class="flex flex-col items-end gap-1 mt-2">
                             <!-- Green Indicator for Available Stock -->
                             <div class="flex items-center gap-1.5 bg-green-100 text-green-800 px-2.5 py-1 rounded-md text-xs font-bold border border-green-200">
                                 <div class="w-2 h-2 bg-green-500 rounded-full stock-pulse-green"></div>
                                 <span data-i18n="status_ok">KÉSZLETEN</span>
                             </div>
-                            <i class="fa-solid fa-chevron-right text-gray-300 text-sm group-hover:text-green-600 transition-colors mt-1 mr-1"></i>
                         </div>
                     </a>
                 </div>
@@ -255,9 +263,14 @@
                 col_country: "Țară",
                 col_status: "Stare",
                 status_limit: "STOC LIMITAT",
-                status_ok: "ÎN STOC", // Added status_ok for Green indicator
+                status_ok: "ÎN STOC",
                 last_update: "Actualizat: Chiar acum",
                 
+                // New translations
+                discount_badge: "50% REDUCERE",
+                country_hu_desc: "Site Oficial",
+                country_ro_desc: "Site Oficial",
+
                 rights: "Toate drepturile rezervate.",
                 privacy: "Confidențialitate",
                 terms: "Termeni"
